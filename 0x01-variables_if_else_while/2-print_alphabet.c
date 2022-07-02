@@ -1,34 +1,27 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
-
 /**
- *main - Prints all possible combinations of two two-digit numbers,
- *        ranging from 0-99, separated by a comma followed by a space.
- *
- * Return: Always 0.
- */
+*main - Entry point
+*Return: Always 0 (Success)
+*/
 int main(void)
 {
-int i, j;
-
-for (i = 0; i < 100; i++)
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+printf("Last digit of %i is %i and is ", n, (n % 10));
+if ((n % 10) == 0)
 {
-for (j = 0; j < 100; j++)
+printf("0\n");
+}
+else if ((n % 10) > 5)
 {
-if (i < j)
+printf("greater than 5\n");
+}
+else
 {
-putchar((i / 10) + 48);
-putchar((i % 10) + 48);
-putchar(' ');
-putchar((j / 10) + 48);
-putchar((j % 10) + 48);
-if (i != 98 || j != 99)
-{
-putchar(',');
-putchar(' ');
+printf("less than 6 and not 0\n");
 }
-}
-}
-}
-putchar('\n');
 return (0);
 }
