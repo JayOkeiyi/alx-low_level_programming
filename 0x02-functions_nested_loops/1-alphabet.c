@@ -11,6 +11,7 @@ void print_alphabet(void)
 
 {
 
+<<<<<<< HEAD
   char letter = 'a';
 
   while (letter <= 'z')
@@ -24,5 +25,20 @@ void print_alphabet(void)
     }
 
   _putchar('\n');
+=======
+char letter = 'a';
+
+while (letter <= 'z')
+
+{
+
+_putchar(letter);
+
+letter++;
+
+}
+
+_putchar('\n');
+>>>>>>> e3547188e199ae264f75fe175031f2c205e3c427
 
 }
