@@ -1,25 +1,27 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_triangle - a function that prints a triangle
- * @size: size of triangle
- * Return: triangle of '#'s
+ * main - prime numbers
+ * Return: 0
  */
 
-void print_triangle(int size)
+int main(void)
 
 {
 
-int i, j;
-for (i = 1; i <= size; i++)
+long num = 612852475143;
+long divisor = 2;
+long larg_prim = 0;
+while (num != 1)
 {
-for (j = size - i; j > 0; j--)
-_putchar(' ');
-for (j = i; j > 0; j--)
-_putchar('#');
-_putchar('\n');
+if (num % divisor == 0)
+{
+num = num / divisor;
+larg_prim = divisor;
 }
-if (size < 1)
-_putchar('\n');
+divisor += 1;
+}
+printf("%ld\n", larg_prim);
+return (0);
 
 }
